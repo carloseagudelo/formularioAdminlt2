@@ -1,0 +1,78 @@
+<div class="container">
+
+  <div class="jumbotron">
+    <h1>Información personal</h1>
+  </div>
+
+  <p id="notice"><%= notice %></p>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <p>
+        <strong>Nombre:</strong>
+        <%= @person.name %>
+      </p>
+      </div>
+      <div class="col-sm-6">
+      <p>
+        <strong>Apellido:</strong>
+        <%= @person.lastname %>
+      </p>
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <p>
+        <strong>Edad:</strong>
+        <%= @person.age %>
+      </p>
+    </div>
+    <div class="col-sm-6">
+      <p>
+        <strong>Fecha_de_Nacimiento:</strong>
+        <%= @person.birthday %>
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="col-sm-6">
+    <p>
+      <strong>Ciudad:</strong>
+      <%= @person.city %>
+    </p>
+  </div>
+  <div class="col-sm-6">
+    <p>
+      <strong>Dirección:</strong>
+      <%= @person.direction %>
+    </p>
+  </div>
+  </div>
+
+  <div class="row">
+  <div class="col-sm-6">
+    <p>
+      <strong>Correo:</strong>
+      <%= @person.email %>
+    </p>
+  </div>
+  <div class="col-sm-6">
+    <p>
+      <strong>Contraseña:</strong>
+      <%= @person.password %>
+    </p>
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-6">
+      <%= link_to 'Editar', edit_person_path(@person), class:'btn btn-success' %>
+    </div>
+    <div class="col-sm-6">
+      <%= link_to 'Atras', people_path, class:'btn btn-primary' %>
+    </div>
+  </div> 
+  
+</div>
