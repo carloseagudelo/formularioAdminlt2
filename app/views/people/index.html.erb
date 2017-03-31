@@ -33,9 +33,21 @@
           <td><%= person.direction %></td>
           <td><%= person.email %></td>
           <td><%= person.password %></td>
-          <td><%= link_to 'Ver', person %></td>
-          <td><%= link_to 'Editar', edit_person_path(person) %></td>
-          <td><%= link_to 'Eliminar', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td>
+            <%= link_to person do%>
+              <i class="glyphicon glyphicon-eye-open"></i>
+            <% end %>         
+          </td>
+          <td>
+            <%= link_to edit_person_path(person) do%>
+              <i class="glyphicon glyphicon-pencil"></i>
+            <% end %>  
+          </td>
+          <td>
+            <%= link_to person, method: :delete, data: { confirm: 'Are you sure?' } do%>
+             <i class="glyphicon glyphicon-trash"></i>
+            <% end %>  
+          </td>
         </tr>
       <% end %>
     </tbody>
